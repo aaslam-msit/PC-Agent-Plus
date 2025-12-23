@@ -1,41 +1,35 @@
-# 🚀 PC-Agent+
+# PC-Agent+
 **Enhanced Hierarchical Multi-Agent Framework for Intelligent PC Automation**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub stars](https://img.shields.io/github/stars/asalam-msit/PC-Agent-Plus?style=social)](https://github.com/asalam-msit/PC-Agent-Plus/stargazers)
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/2501.xxxxx)
-[![GitHub issues](https://img.shields.io/github/issues/asalam-msit/PC-Agent-Plus)](https://github.com/asalam-msit/PC-Agent-Plus/issues)
-
-## 📖 Overview
+## Overview
 
 **PC-Agent+** is an advanced extension of the original [PC-Agent](https://github.com/X-PLUG/MobileAgent/tree/main/PC-Agent) framework that introduces **intelligent multi-model routing** and **automated evaluation** to address critical limitations in cost efficiency and scalability for PC automation tasks.
 
-### 🎯 **Key Innovations**
+### **Key Innovations**
 - **47% Cost Reduction** through dynamic model selection
 - **50% Faster Evaluation** with hybrid automated validation
 - **State-of-the-art Performance** on complex PC tasks
 - **Multi-Model Support** (GPT-4o, Claude-3.5, Qwen2.5-VL, Rule-based)
 
-## ✨ Features
+## Features
 
-### 🤖 **Intelligent Multi-Model Routing**
+###  **Intelligent Multi-Model Routing**
 - Dynamically selects between premium (GPT-4o), mid-tier (Claude-3.5), open-source (Qwen2.5-VL), and rule-based models
 - **Reduces costs by 33-47%** while maintaining performance
 - Task complexity-based routing with budget constraints
 
-### 🔍 **Automated Evaluation Framework**
+###  **Automated Evaluation Framework**
 - Hybrid validation using file system monitoring, screenshot analysis, and process verification
 - **Cuts evaluation time by 50%**, enables scalable testing
 - Weighted scoring system with dynamic thresholds
 
-### 🏗️ **Enhanced Architecture**
+###  **Enhanced Architecture**
 - Four-agent collaboration (Manager, Progress, Decision, Reflection) with enhanced Router Agent
 - Maintains **63.2% success rate** on PC-Eval benchmark
 - Active Perception Module for precise GUI interaction
 - Reflection-based dynamic decision-making
 
-## 📊 Performance Comparison
+## Performance Comparison
 
 | Metric | Original PC-Agent | PC-Agent+ | Improvement |
 |--------|-------------------|-----------|-------------|
@@ -45,7 +39,7 @@
 | **Model Utilization** | 100% Premium | 30% Premium, 45% Mid/Open-Source | **Optimized resource allocation** |
 | **Hallucination Rate** | Baseline | **-18%** | **Reduced errors** |
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.9+
