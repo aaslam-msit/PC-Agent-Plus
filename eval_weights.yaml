@@ -1,0 +1,73 @@
+# Automated Evaluation Framework Configuration
+# Version: 1.0.0
+
+# Weight configurations by task type
+task_types:
+  file_operations:
+    name: "File Operations"
+    description: "Saving, creating, deleting, moving files"
+    file_weight: 0.8
+    visual_weight: 0.1
+    process_weight: 0.1
+    threshold: 0.7
+    
+  gui_interactions:
+    name: "GUI Interactions"
+    description: "Clicking, typing, dragging, scrolling"
+    file_weight: 0.1
+    visual_weight: 0.8
+    process_weight: 0.1
+    threshold: 0.6
+    
+  app_management:
+    name: "Application Management"
+    description: "Opening/closing applications, process management"
+    file_weight: 0.2
+    visual_weight: 0.3
+    process_weight: 0.5
+    threshold: 0.8
+    
+  cross_app_workflows:
+    name: "Cross-Application Workflows"
+    description: "Tasks spanning multiple applications"
+    file_weight: 0.3
+    visual_weight: 0.4
+    process_weight: 0.3
+    threshold: 0.65
+
+# Visual comparison settings
+visual:
+  similarity_method: "ssim"  # Options: ssim, mse, vlm, hybrid
+  ssim_threshold: 0.85
+  mse_threshold: 0.1
+  screenshot_delay: 1.0  # Seconds to wait before screenshot
+  comparison_region: "focused_window"  # Options: full_screen, focused_window, custom_region
+  save_screenshots: false
+  screenshot_dir: "screenshots/"
+
+# File system monitoring
+file_monitoring:
+  watch_directories:
+    - "C:/Users/Public/Documents"
+    - "C:/Users/Public/Desktop"
+  file_types: [".txt", ".docx", ".xlsx", ".pdf", ".png", ".jpg"]
+  check_interval: 1.0  # Seconds
+  checksum_verification: true
+
+# Process verification
+process_verification:
+  check_interval: 2.0
+  verify_executable_hash: false
+  allowed_processes:
+    - "chrome.exe"
+    - "WINWORD.EXE"
+    - "EXCEL.EXE"
+    - "notepad.exe"
+    - "explorer.exe"
+
+# Evaluation logging
+logging:
+  log_evaluations: true
+  evaluation_log_dir: "logs/evaluations/"
+  detailed_logging: false
+  log_level: "INFO"

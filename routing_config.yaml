@@ -1,0 +1,71 @@
+# PC-Agent+ Routing Configuration
+# Version: 1.0.0
+
+models:
+  premium:
+    name: "gpt-4o"
+    provider: "openai"
+    cost_per_1k_tokens: 0.015
+    max_tokens: 4096
+    context_window: 128000
+    enabled: true
+    
+  mid:
+    name: "claude-3.5-sonnet"
+    provider: "anthropic"
+    cost_per_1k_tokens: 0.008
+    max_tokens: 4096
+    context_window: 200000
+    enabled: true
+    
+  open:
+    name: "qwen2.5-vl-72b"
+    provider: "local"  # Options: local, together, replicate
+    cost_per_1k_tokens: 0.000
+    max_tokens: 8192
+    context_window: 32768
+    enabled: true
+    
+  rule:
+    name: "rule-based"
+    provider: "local"
+    cost_per_1k_tokens: 0.000
+    max_tokens: 0
+    context_window: 0
+    enabled: true
+
+# Complexity thresholds (0-1 scale)
+thresholds:
+  premium: 0.8
+  mid: 0.5
+  open: 0.2
+
+# Budget configuration
+budget:
+  daily_limit: 10.00  # USD
+  weekly_limit: 50.00
+  monthly_limit: 200.00
+  warning_threshold: 2.00
+  critical_threshold: 0.50
+
+# Fallback behavior
+fallback:
+  enabled: true
+  max_retries: 2
+  fallback_order: ["premium", "mid", "open", "rule"]
+  timeout_seconds: 30
+
+# Complexity scoring weights
+complexity_weights:
+  word_count: 0.3
+  app_count: 0.4
+  historical_success: 0.3
+  inter_app_dependency: 0.5
+  gui_complexity: 0.4
+
+# Model-specific parameters
+parameters:
+  temperature: 0.1
+  top_p: 0.9
+  presence_penalty: 0.0
+  frequency_penalty: 0.0

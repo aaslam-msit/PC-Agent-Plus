@@ -1,0 +1,94 @@
+{
+  "name": "PC-Eval Benchmark Tasks",
+  "version": "1.0",
+  "description": "Complex PC tasks for evaluating PC-Agent+",
+  "tasks": [
+    {
+      "id": "pc_eval_001",
+      "instruction": "In the Notepad app, open the 'travel_plan' file in 'Documents', and check the time and location of the travel plans. Add the travel destination to the World Clock list on the Clock app. Calculate the interval between February 18 and the start time of the travel on the Calculator.",
+      "complexity": 0.85,
+      "expected_outcome": {
+        "files": ["travel_plan.txt"],
+        "processes": ["notepad.exe", "calculator.exe"],
+        "ui_elements": ["World Clock", "Add Location"]
+      }
+    },
+    {
+      "id": "pc_eval_002",
+      "instruction": "Search on Chrome for the total population of China, the United States, and India in 2024 respectively. Create a new spreadsheet in Excel, write the three countries' names in column A in descending order of population, and the corresponding populations in column B.",
+      "complexity": 0.8,
+      "expected_outcome": {
+        "files": ["population_data.xlsx"],
+        "processes": ["chrome.exe", "excel.exe"],
+        "ui_elements": ["Search bar", "Excel spreadsheet"]
+      }
+    },
+    {
+      "id": "pc_eval_003",
+      "instruction": "Open the 'test_doc1' file in 'Documents' in File Explorer, set the title to be bold, and set the line spacing of the first two paragraphs to 1.5x in Word.",
+      "complexity": 0.7,
+      "expected_outcome": {
+        "files": ["test_doc1.docx"],
+        "processes": ["explorer.exe", "WINWORD.EXE"],
+        "ui_elements": ["Bold button", "Line spacing option"]
+      }
+    },
+    {
+      "id": "pc_eval_004",
+      "instruction": "Create a new document in Word. Write down two paragraphs introducing Alibaba and OpenAI respectively. Save the document as 'TechCompanies'.",
+      "complexity": 0.6,
+      "expected_outcome": {
+        "files": ["TechCompanies.docx"],
+        "processes": ["WINWORD.EXE"],
+        "ui_elements": ["New document", "Save dialog"]
+      }
+    },
+    {
+      "id": "pc_eval_005",
+      "instruction": "Search for the paper 'Attention is all you need' on Chrome, download the paper and record its abstract. Create a new document in Word, write down the abstract of the paper, and save it as 'Transformer'.",
+      "complexity": 0.75,
+      "expected_outcome": {
+        "files": ["Transformer.docx", "attention_is_all_you_need.pdf"],
+        "processes": ["chrome.exe", "WINWORD.EXE"],
+        "ui_elements": ["Download button", "Abstract section"]
+      }
+    },
+    {
+      "id": "pc_eval_006",
+      "instruction": "Open the 'test_doc3' file located in 'Documents' in File Explorer, note its Chinese content, create a new Word document, and write down the English translation of the Chinese content from test_doc3.",
+      "complexity": 0.8,
+      "expected_outcome": {
+        "files": ["translated_document.docx", "test_doc3.txt"],
+        "processes": ["explorer.exe", "WINWORD.EXE"],
+        "ui_elements": ["Chinese text", "Translated text"]
+      }
+    },
+    {
+      "id": "pc_eval_007",
+      "instruction": "Compare the prices of Amazon, Walmart, and Best Buy for a new Nintendo Switch console in Chrome, and write the site with the cheapest price and the price on Notepad.",
+      "complexity": 0.7,
+      "expected_outcome": {
+        "files": ["price_comparison.txt"],
+        "processes": ["chrome.exe", "notepad.exe"],
+        "ui_elements": ["Price listings", "Notepad document"]
+      }
+    },
+    {
+      "id": "pc_eval_008",
+      "instruction": "Read the mail 'Travel' in Outlook, record the departure, destination and date of the journey. Search for a round-trip flight on booking.com on Chrome.",
+      "complexity": 0.65,
+      "expected_outcome": {
+        "files": ["travel_details.txt"],
+        "processes": ["outlook.exe", "chrome.exe"],
+        "ui_elements": ["Email content", "Flight search results"]
+      }
+    }
+  ],
+  "metadata": {
+    "total_tasks": 8,
+    "avg_complexity": 0.73,
+    "applications": ["Chrome", "Word", "Excel", "Notepad", "Calculator", "Outlook", "File Explorer"],
+    "created": "2025-01-15",
+    "updated": "2025-01-15"
+  }
+}

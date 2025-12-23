@@ -1,0 +1,49 @@
+# PC-Agent+ Configuration Template
+# Copy this file to local.yaml and fill in your API keys
+
+# API Keys (Add your own)
+api_keys:
+  openai: "your-openai-api-key-here"
+  anthropic: "your-anthropic-api-key-here"
+  together: "your-together-api-key-here"  # For Qwen on Together AI
+  huggingface: "your-huggingface-token-here"
+
+# System Configuration
+system:
+  platform: "windows"  # windows, macos, linux
+  screen_resolution: [1920, 1080]
+  default_timeout: 30
+  max_retries: 3
+  
+# Router Configuration
+router:
+  mode: "balanced"  # Options: cost_saving, performance, balanced
+  enable_learning: true
+  learning_rate: 0.1
+  complexity_cache_size: 1000
+
+# Evaluation Configuration
+evaluation:
+  enable_auto_eval: true
+  human_fallback: true
+  confidence_threshold: 0.9
+  save_failed_evaluations: true
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "logs/pc_agent_plus.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+
+# Performance Optimization
+performance:
+  enable_caching: true
+  cache_ttl: 300  # 5 minutes
+  parallel_execution: true
+  max_workers: 4
+
+# Uncomment and configure for your setup
+# local_models:
+#   qwen_path: "C:/path/to/qwen/model"
+#   llava_path: "C:/path/to/llava/model"
