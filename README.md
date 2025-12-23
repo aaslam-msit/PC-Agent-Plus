@@ -62,3 +62,55 @@ pip install -r requirements.txt
 # Configure environment
 cp config.example.yaml config.yaml
 # Edit config.yaml with your API keys and preferences
+
+Architecture Overview
+
+┌─────────────────────────────────────────────────────────────┐
+│                    User Instruction                         │
+└───────────────────────────┬─────────────────────────────────┘
+                            │
+                    ┌───────▼────────┐
+                    │  Manager Agent │  ← Decomposes instructions
+                    │  (Instruction  │     into parameterized subtasks
+                    │  Decomposition)│
+                    └───────┬────────┘
+                            │
+                    ┌───────▼────────┐
+                    │  Router Agent  │  ← KEY INNOVATION #1
+                    │  • Complexity  │     Dynamic model selection
+                    │  • Budget      │     based on task requirements
+                    │  • Model Pool  │
+                    └───────┬────────┘
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+┌───────▼────────┐ ┌───────▼────────┐ ┌───────▼────────┐
+│ Premium Model  │ │ Mid-Tier Model │ │ Open-Source    │
+│ (GPT-4o)       │ │ (Claude-3.5)   │ │ (Qwen2.5-VL)   │
+│ $0.15/task     │ │ $0.12/task     │ │ $0.03/task     │
+└───────┬────────┘ └───────┬────────┘ └───────┬────────┘
+        │                   │                   │
+        └───────────────────┼───────────────────┘
+                            │
+                    ┌───────▼────────┐
+                    │  Decision Agent│  ← Executes actions via APM
+                    │  (Action       │     using Active Perception
+                    │  Execution)    │     Module
+                    └───────┬────────┘
+                            │
+                ┌───────────┼───────────┐
+                │           │           │
+        ┌───────▼────────┐ ┌▼───────────▼┐
+        │  Reflection    │ │  Automated  │ ← KEY INNOVATION #2
+        │     Agent      │ │  Evaluation │   Parallel validation
+        │  (Error        │ │  • File     │   with multi-channel
+        │   Recovery)    │ │  • Visual   │   verification
+        └───────┬────────┘ │  • Process  │
+                │          └─────────────┘
+                └───────────┼───────────┘
+                            │
+                    ┌───────▼────────┐
+                    │   Final Output │
+                    │  and Validation│
+                    │     Report     │
+                    └────────────────┘
